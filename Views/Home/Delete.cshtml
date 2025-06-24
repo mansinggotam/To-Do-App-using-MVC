@@ -1,0 +1,12 @@
+﻿@model ToDoApplicationMVC.Models.Todo
+<link href="~/css/site.css" rel="stylesheet" />
+
+<h2>Delete Task in To-Do</h2>
+<p>Are you sure want to delete task?</p>
+<div><strong>The task is: </strong>@Model.Task</div>
+
+<form asp-action="Delete">
+	<input type="hidden" asp-for="Id" />
+	<button type="submit" class="btn btn-danger">Delete</button>
+	<a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

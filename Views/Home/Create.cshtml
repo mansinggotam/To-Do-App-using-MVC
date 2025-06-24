@@ -1,0 +1,12 @@
+﻿@model ToDoApplicationMVC.Models.Todo
+<link rel="stylesheet" href="~/css/site.css" />
+
+<h2>Add Todo</h2>
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Task"></label>
+        <input asp-for="Task" class="form-control" />
+        <span asp-validation-for="Task" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
